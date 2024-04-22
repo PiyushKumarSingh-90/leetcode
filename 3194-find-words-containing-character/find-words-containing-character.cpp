@@ -10,7 +10,7 @@ public:
 
                 if(words[i][j]==x)
                 {
-                    arr.push_back(i);
+                    arr.push_back(i); 
                     break;
                 }
             }
