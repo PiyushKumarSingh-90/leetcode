@@ -1,33 +1,16 @@
 class Solution {
 public:
-    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) 
-    {
-       int count=0;
-       int index=0;
+        int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
+        std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+     int cnt = 0;
 
-       if(ruleKey == "type")
-       {
-            index=0;
-       }
-
-       else if(ruleKey == "color")
-       {
-            index=1;
-       }
-
-       else if(ruleKey == "name")
-       {
-            index=2;
-       }
-
-       for(int i=0; i<items.size();i++)
-       {
-          if(items[i][index]==ruleValue)
-          {
-            count++;
-          }
-       }
-
-       return count;
+        for(int i=0;i<items.size();i++){
+            if(ruleKey =="type" && ruleValue == items[i][0]) cnt++;
+            else if(ruleKey =="color" && ruleValue == items[i][1]) cnt++;
+            else if(ruleKey =="name" && ruleValue == items[i][2]) cnt++;
+        }
+     return cnt;   
     }
 };
