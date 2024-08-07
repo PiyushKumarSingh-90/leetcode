@@ -6,6 +6,7 @@ public:
         for (int i = 0; i < nums.size(); i++)
         {
             bool found = false;
+
             for (int j = 0; j < nums.size(); j++)
             {
                 if (i != j && nums[i] == nums[j])
@@ -14,14 +15,14 @@ public:
                     break;
                 }
             }
+            
             if (!found)
             {
                 n = nums[i];
                 break;
             }
         }
-        return n;
         
-    return n; 
+        return n; 
     }
 };
