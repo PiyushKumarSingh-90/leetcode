@@ -12,15 +12,19 @@ public:
             n++;
             else 
             {
-               if(max<n)
-                max=n;
+               if(max<n){ max=n;}
+
                 n=0;                                        
             }
         
         }
         
         if(max<n)
-        max=n;
-        return max;    
+           max=n;
+
+        return max;
+
+        
+    
     }
 };
