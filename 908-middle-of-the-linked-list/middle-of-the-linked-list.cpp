@@ -12,11 +12,11 @@ class Solution {
 public:
     ListNode* middleNode(ListNode* head) 
     {
-        // Step 1: Count the nodes in the linked list
         int count = 0;
         ListNode* temp = head;
 
-        while (temp != nullptr) {
+        while (temp != NULL) 
+        {
             count++;
             temp = temp->next;
         }
