@@ -2,6 +2,7 @@ class MyHashSet
 {
 public:
     int arr[10000001];
+    
     MyHashSet() 
     {
         memset(arr,-1,sizeof(arr));
