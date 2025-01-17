@@ -13,24 +13,23 @@ class Solution
 public:
     bool isPalindrome(ListNode* head) 
     {
-        if (!head) return true; // Handle empty list
+        
 
-        // Initialize curr to head
+        
         stack<int> s;
         ListNode* curr = head;
 
-        // Push all elements of the linked list into the stack
+        
         while (curr != NULL)
         {
             s.push(curr->val);
             curr = curr->next;
         }
 
-        // Compare the stack elements with the linked list values
+        
         while (head && !s.empty())
         {
-            if (s.top() != head->val) 
-                return false; // Not a palindrome
+            if (s.top() != head->val) return false; 
             s.pop();
             head = head->next;
         }
