@@ -13,7 +13,7 @@ class Solution
 public:
     ListNode* mergeNodes(ListNode* head) 
     {
-         ListNode* curr = head->next; // Start after the initial zero
+        ListNode* curr = head->next; // Start after the initial zero
         ListNode* newHead = new ListNode(0); // Dummy head for the new list
         ListNode* newTail = newHead; // Tail pointer for adding new nodes
         int sum = 0;
