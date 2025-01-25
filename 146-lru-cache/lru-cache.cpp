@@ -24,6 +24,7 @@ public:
     int capacity;
    
 //two dummy nodes to keep track starting and ending point of list  
+
     node * head = new node(0,0);
     node * tail = new node(0,0);
 
@@ -37,17 +38,19 @@ public:
     }
 
     // function to help a node in the next to head [can say front of our list]
+
     void insert ( node* currnode)
     {
         currnode->next = head->next;    // adding node in next of head (front of our cache)
         head->next->prev = currnode;
         head->next= currnode;
         currnode->prev= head;
-        mp[currnode->key]=currnode;      //update map accordingly
+        mp[currnode->key]=currnode;  //update map accordingly
     }
     
    
 // function to remove a node 
+
     void remove(node* currnode)
     {
         mp.erase(currnode->key);
@@ -59,6 +62,7 @@ public:
     int get(int key) 
     {
        // if key is not present than return -1;
+
         if(mp.find(key)==mp.end())
         {
             return -1;
