@@ -3,23 +3,22 @@ class Solution
 public:
     int removeDuplicates(vector<int>& nums) 
     {
+        if (nums.empty()) return 0; // Handle edge case
+
+        int i = 0; // Pointer for unique elements
+        int New = nums[0]; // Track last unique element
         
-       if (nums.empty()) return 0; 
-
-        int i = 0;  
-        int j = 1;  
-
-        while (j < nums.size()) 
+        for (int j = 1; j < nums.size(); j++) 
         {
-            if (nums[j] != nums[i]) 
+            if (nums[j] != New) 
             {
                 i++;  
-                nums[i] = nums[j]; // Move unique element forward
+                nums[i] = nums[j]; // Place unique element in the array
+                New = nums[j]; // Update last unique element
             }
-            j++; // Move scanning pointer
         }
         
-        return i + 1; 
+        return i + 1;
     }
 };
 
