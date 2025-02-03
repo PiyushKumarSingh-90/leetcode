@@ -3,17 +3,20 @@ class Solution
 public:
     bool canJump(vector<int>& nums) 
     {
-        int maxReach = 0;
+        int jump = 0;
 
-        for(int i = 0; i < nums.size(); i++) 
+        
+
+        for(int i = 0 ; i < nums.size() ; i++)
         {
-            if(i > maxReach) return false;  // If we can't reach this index, return false
-            
-            maxReach = max(maxReach, i + nums[i]); // Update maxReach
+            if(i > jump) return false ;
 
-            if(maxReach >= nums.size() - 1) return true; // If we reach or pass the last index,     return true
+            jump = max(jump , i + nums[i]);
+
+            if(jump >= nums.size()-1) return true ;
+            
         }
 
-        return true;  // If we exit the loop, return true
+        return false;
     }
 };
