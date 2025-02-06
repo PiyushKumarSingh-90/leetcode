@@ -11,7 +11,7 @@ public:
 
         for( int i = 0 ; i < s.size() ; i++)
         {
-             if (roman[s[i]] < roman[s[i + 1]])  
+             if (roman[ s[i] ] < roman[ s[i + 1] ])  
             {
                 result -= roman[ s[i] ];
             }
