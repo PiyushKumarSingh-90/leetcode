@@ -12,7 +12,8 @@ public:
             umap[x].push_back(temp);
         }
       
-        for(auto x : umap){
+        for(auto x : umap)
+        {
             ans.push_back(x.second);
         }
         return ans;
