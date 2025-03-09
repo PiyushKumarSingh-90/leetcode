@@ -13,7 +13,7 @@ public:
             if(mp.count(nums[i]))
             {
                 if(i-mp[nums[i]] <= k) return true;
-            }
+        }
 
             // just insert in value. or update the value of index.
             mp[nums[i]] = i;
