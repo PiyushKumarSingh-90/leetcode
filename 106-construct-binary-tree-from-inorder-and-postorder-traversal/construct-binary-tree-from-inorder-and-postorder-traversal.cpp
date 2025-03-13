@@ -15,7 +15,8 @@ public:
     int postIndex;  // Track current index in postorder traversal
     unordered_map<int, int> indexMap;  // Store inorder indices for O(1) lookups
 
-    TreeNode* buildTreeUtil(vector<int>& inorder, vector<int>& postorder, int is, int ie) {
+    TreeNode* buildTreeUtil(vector<int>& inorder, vector<int>& postorder, int is, int ie) 
+    {
         if (is > ie) return nullptr;
 
         TreeNode* root = new TreeNode(postorder[postIndex--]);
@@ -31,9 +32,12 @@ public:
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) 
     {
         
-        postIndex = postorder.size() - 1;  // Start from last element of postorder
+        postIndex = postorder.size() - 1; // Start from last element of postorder
+
         for (int i = 0; i < inorder.size(); i++)
+        {
             indexMap[inorder[i]] = i;  // Store inorder indices for quick access
+        }
 
         return buildTreeUtil(inorder, postorder, 0, inorder.size() - 1);
     }
