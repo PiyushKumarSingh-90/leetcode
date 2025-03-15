@@ -15,7 +15,8 @@ public:
 
     bool b=0;
     
-    void preorder(int s,int targetSum,TreeNode* root){
+    void preorder(int s,int targetSum,TreeNode* root)
+    {
         
         if(!root)return;
         
@@ -36,7 +37,7 @@ public:
     bool hasPathSum(TreeNode* root, int targetSum) 
     {
         int s=0;
-        
+
         preorder(s,targetSum,root);
         
         return b;
