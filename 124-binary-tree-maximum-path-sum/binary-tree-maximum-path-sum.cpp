@@ -15,7 +15,8 @@ public:
 
     int maxSum;
     
-    int solve(TreeNode* root) {
+    int solve(TreeNode* root) 
+    {
         if(root == NULL)
             return 0;
         
