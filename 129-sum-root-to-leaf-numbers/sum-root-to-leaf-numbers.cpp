@@ -20,7 +20,8 @@ public:
         
         curr = curr*10 + root->val;
         
-        if(root->left == NULL && root->right == NULL) {
+        if(root->left == NULL && root->right == NULL) 
+        {
             return curr;
         }
         
