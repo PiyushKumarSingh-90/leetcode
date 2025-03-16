@@ -16,8 +16,7 @@ public:
     int find(TreeNode* root, int curr) 
     {
         
-        if(!root)
-            return 0;
+        if(!root) return 0;
         
         curr = curr*10 + root->val;
         
