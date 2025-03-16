@@ -17,8 +17,7 @@ public:
     
     int solve(TreeNode* root) 
     {
-        if(root == NULL)
-            return 0;
+        if(root == NULL) return 0;
         
         int l = solve(root->left);
         int r = solve(root->right);
