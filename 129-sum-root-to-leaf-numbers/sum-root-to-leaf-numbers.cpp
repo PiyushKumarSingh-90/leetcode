@@ -12,7 +12,8 @@
 class Solution {
 public:
 
-    int find(TreeNode* root, int curr) {
+    int find(TreeNode* root, int curr) 
+    {
         
         if(!root)
             return 0;
