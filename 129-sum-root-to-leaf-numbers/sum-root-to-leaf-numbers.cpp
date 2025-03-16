@@ -9,7 +9,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
 
     int find(TreeNode* root, int curr) 
@@ -31,8 +32,8 @@ public:
         return left_num + right_num;
     }
 
-    int sumNumbers(TreeNode* root) {
-        
+    int sumNumbers(TreeNode* root) 
+    {        
         return find(root, 0);
     }
 };
