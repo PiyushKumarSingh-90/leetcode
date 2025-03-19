@@ -20,22 +20,22 @@ public:
 
         while(!q.empty())
         {
-            int n=q.size();
-            double sum=0;
+            int n = q.size();
+            double sum = 0;
             double count = n;
 
             for(int i=0;i<n;i++)
             {
-               TreeNode*temp=q.front();
+               TreeNode* temp = q.front();
 
                 q.pop();
 
-                if(temp->left!=NULL)
+                if(temp->left != NULL)
                 {
                     q.push(temp->left);
                 }
 
-                if(temp->right!=NULL)
+                if(temp->right != NULL)
                 {
                     q.push(temp->right);
                 }
