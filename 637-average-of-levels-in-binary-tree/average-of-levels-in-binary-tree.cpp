@@ -24,7 +24,7 @@ public:
             double sum = 0;
             double count = n;
 
-            for(int i=0;i<n;i++)
+            for(int i=0 ; i < n ; i++)
             {
                TreeNode* temp = q.front();
 
