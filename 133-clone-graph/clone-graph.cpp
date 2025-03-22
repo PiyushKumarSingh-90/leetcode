@@ -22,15 +22,20 @@ public:
 class Solution {
 public:
 
-    void DFS(Node* node, Node* clone_node, vector<Node*>& visited) {
+    void DFS(Node* node, Node* clone_node, vector<Node*>& visited) 
+    {
         visited[node->val] = clone_node;
         
-        for(Node* x : node->neighbors) {
-            if(visited[x->val] == NULL) {
+        for(Node* x : node->neighbors) 
+        {
+            if(visited[x->val] == NULL) 
+            {
                 Node* clone = new Node(x->val);
                 clone_node->neighbors.push_back(clone);
                 DFS(x, clone, visited);
-            } else {
+            } 
+            else 
+            {
                 clone_node->neighbors.push_back(visited[x->val]);
             }
         }
