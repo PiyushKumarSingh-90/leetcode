@@ -91,6 +91,7 @@ public:
             }
             
             i = n-1;
+            
             // bottom -> left right
             if(board[i][j] == 'O')
             {
@@ -99,6 +100,5 @@ public:
         }
         
         convert(board);
-
     }
 };
