@@ -41,9 +41,9 @@ public:
         }
     }
 
-    Node* cloneGraph(Node* node) {
-        if(!node)
-            return NULL;
+    Node* cloneGraph(Node* node) 
+    {
+        if(!node) return NULL;
         
         //cloned the given node
         Node* clone_node = new Node(node->val);
