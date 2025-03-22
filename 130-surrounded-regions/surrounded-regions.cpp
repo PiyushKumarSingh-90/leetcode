@@ -15,10 +15,12 @@ public:
                 {
                     board[i][j] = 'O';
                 }
+
                 else if(board[i][j] == 'O')
                 {
                     board[i][j] = 'X';
                 }
+
             }
         }
     }
@@ -29,6 +31,7 @@ public:
         {
             return true;
         }
+
         return false;
     }
     
@@ -40,18 +43,22 @@ public:
         {
             dfs(board, i+1, j, n, m);
         }
+
         if(isValid(i-1, j, n, m, board))
         {
             dfs(board, i-1, j, n, m);
         }
+
         if(isValid(i, j+1, n, m, board))
         {
             dfs(board, i, j+1, n, m);
         }
+
         if(isValid(i, j-1, n, m, board))
         {
             dfs(board, i, j-1, n, m);
         }
+        
     }
 
     void solve(vector<vector<char>>& board) 
@@ -91,7 +98,7 @@ public:
             }
             
             i = n-1;
-            
+
             // bottom -> left right
             if(board[i][j] == 'O')
             {
