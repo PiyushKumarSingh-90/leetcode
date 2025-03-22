@@ -17,7 +17,8 @@ public:
         
         grid[i][j] = '$';
         
-        for(pair<int, int> &p : dir) {
+        for(pair<int, int> &p : dir) 
+        {
             int i_ = i + p.first;
             int j_ = j + p.second;
             dfs(grid, i_, j_);
