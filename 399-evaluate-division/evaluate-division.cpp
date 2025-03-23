@@ -2,17 +2,20 @@ class Solution
 {
 public:
 
-    void dfs(unordered_map<string, vector<pair<string, double>>> &adj, string src, string dst, unordered_set<string>& visited, double product, double &ans) {
-        if(visited.find(src) != visited.end())
-            return;
+    void dfs(unordered_map<string, vector<pair<string, double>>> &adj, string src, string dst, unordered_set<string>& visited, double product, double &ans) 
+    {
+        if(visited.find(src) != visited.end()) return;
         
         visited.insert(src);
-        if(src == dst) {
+
+        if(src == dst) 
+        {
             ans = product;
             return;
         }
         
-        for(auto p : adj[src]) {
+        for(auto p : adj[src]) 
+        {
             
             string v   = p.first;
             double val = p.second;
@@ -28,7 +31,8 @@ public:
         
         unordered_map<string, vector<pair<string, double>>> adj;
         
-        for(int i = 0; i<n; i++) {
+        for(int i = 0; i<n; i++)
+        {
             
             string u   = equations[i][0];
             string v   = equations[i][1];
@@ -40,7 +44,8 @@ public:
         
         vector<double> result;
         
-        for(auto &query : queries) {
+        for(auto &query : queries) 
+        {
             
             string src = query[0];
             string dst = query[1];
@@ -49,7 +54,8 @@ public:
             double product = 1.0;
             
             
-            if(adj.find(src) != adj.end()) {
+            if(adj.find(src) != adj.end()) 
+            {
                 unordered_set<string> visited;
                 
                 dfs(adj, src, dst, visited, product, ans);
