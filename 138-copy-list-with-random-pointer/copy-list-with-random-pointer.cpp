@@ -35,11 +35,12 @@ public:
             new_curr = new_curr->next;
             curr = curr->next;
         }
-        
+
         curr = head;
         new_curr = newhead->next;
         
-        while(curr){
+        while(curr)
+        {
             Node* random = curr->random;
             Node* newNode = umap[random];
             new_curr->random = newNode;
