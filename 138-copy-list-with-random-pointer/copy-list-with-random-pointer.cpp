@@ -20,13 +20,14 @@ public:
     Node* copyRandomList(Node* head) 
     {
         if( head == NULL) return head;
-        
+
         Node* newhead = new Node(0);
         Node* new_curr = newhead;
         Node* curr = head;
         unordered_map<Node*, Node*> umap;
         
-        while(curr){
+        while(curr)
+        {
             Node* temp = new Node(curr->val);
             umap.insert({curr, temp});
             
@@ -34,6 +35,7 @@ public:
             new_curr = new_curr->next;
             curr = curr->next;
         }
+        
         curr = head;
         new_curr = newhead->next;
         
