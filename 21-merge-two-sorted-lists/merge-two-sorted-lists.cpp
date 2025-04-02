@@ -13,6 +13,7 @@ class Solution
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) 
     {
+        
         ListNode* head = new ListNode(0);
         ListNode* curr = head;
 
@@ -28,7 +29,7 @@ public:
                 curr->next = list2;
                 list2 = list2->next;
             }
-            
+
             curr = curr->next;
         }
 
