@@ -20,6 +20,7 @@ public:
     Node* copyRandomList(Node* head) 
     {
         if( head == NULL) return head;
+        
         Node* newhead = new Node(0);
         Node* new_curr = newhead;
         Node* curr = head;
