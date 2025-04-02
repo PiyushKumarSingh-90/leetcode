@@ -22,8 +22,10 @@ public:
         if( head == NULL) return head;
 
         Node* newhead = new Node(0);
-        Node* new_curr = newhead;
+
         Node* curr = head;
+        Node* new_curr = newhead;
+
         unordered_map<Node*, Node*> umap;
         
         while(curr)
