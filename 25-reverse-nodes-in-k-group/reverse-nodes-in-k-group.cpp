@@ -19,7 +19,8 @@ public:
         int count = 0;
 
         // Step 1: Count k nodes
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++) 
+        {
             if (!temp) return head; // If less than k nodes remain, return as is
             temp = temp->next;
         }
@@ -29,7 +30,8 @@ public:
         ListNode* curr = head;
         ListNode* next = nullptr;
         
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++) 
+        {
             next = curr->next;
             curr->next = prev;
             prev = curr;
