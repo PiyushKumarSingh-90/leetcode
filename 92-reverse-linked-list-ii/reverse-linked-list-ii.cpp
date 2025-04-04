@@ -21,7 +21,8 @@ public:
         ListNode* prev = &dummy;
 
         // Step 1: Reach node before `left`
-        for (int i = 1; i < left; i++) {
+        for (int i = 1; i < left; i++) 
+        {
             prev = prev->next;
         }
 
@@ -30,7 +31,8 @@ public:
         ListNode* next = nullptr;
         ListNode* prevNode = nullptr;
         
-        for (int i = left; i <= right; i++) {
+        for (int i = left; i <= right; i++) 
+        {
             next = curr->next;
             curr->next = prevNode;
             prevNode = curr;
