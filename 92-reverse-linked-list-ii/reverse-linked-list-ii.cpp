@@ -18,6 +18,7 @@ public:
 
         ListNode dummy(0);
         dummy.next = head;
+        
         ListNode* prev = &dummy;
 
         // Step 1: Reach node before `left`
