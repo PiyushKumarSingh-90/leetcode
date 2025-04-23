@@ -15,7 +15,7 @@ public:
     {
         ListNode* head = new ListNode();
 
-        ListNode* temp = head;
+     ListNode* temp = head;
 
         int carry = 0;
 
