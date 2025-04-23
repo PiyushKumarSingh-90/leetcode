@@ -11,7 +11,7 @@ class Solution
 public:
     bool hasCycle(ListNode *head) 
     {
-        ListNode *curr = head;
+
 
         if(head == NULL || head->next == NULL) return false;
 
@@ -29,7 +29,7 @@ public:
             fast = fast->next->next;
         }
 
-        return true;
+        return true;    
 
     }
 };
