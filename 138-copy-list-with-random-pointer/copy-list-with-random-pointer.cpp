@@ -45,7 +45,9 @@ public:
         while(curr)
         {
             Node* random = curr->random;
+
             Node* newNode = umap[random];
+            
             new_curr->random = newNode;
             
             new_curr = new_curr->next;
