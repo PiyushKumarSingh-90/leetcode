@@ -18,7 +18,7 @@ class Solution
 {
 public:
     Node* copyRandomList(Node* head) 
-    {
+    {       
         if( head == NULL) return head;
 
         Node* newhead = new Node(0);
