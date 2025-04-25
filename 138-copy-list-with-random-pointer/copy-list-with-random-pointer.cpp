@@ -19,14 +19,14 @@ class Solution
 public:
     Node* copyRandomList(Node* head) 
     {
-        if( head == NULL) return head;
+        
 
         Node* newhead = new Node(0);
 
         Node* curr = head;
         Node* new_curr = newhead;
 
-        unordered_map<Node*, Node*> umap;
+        unordered_map< Node*, Node* > umap;
         
         while(curr)
         {
