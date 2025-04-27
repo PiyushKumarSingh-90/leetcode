@@ -27,7 +27,7 @@ public:
             prev = prev->next;
         }
 
-        // Step 2: Reverse sublist from `left` to `right`
+        // Step 2: Reverse sublist from `left` to `right` 
         ListNode* curr = prev->next;
         ListNode* next = nullptr;
         ListNode* prevNode = nullptr;
