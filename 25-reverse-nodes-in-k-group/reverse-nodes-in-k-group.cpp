@@ -25,9 +25,9 @@ public:
         }
 
         // Step 2: Reverse k nodes
-        ListNode* prev = nullptr;
+        ListNode* prev = NULL;
         ListNode* curr = head;
-        ListNode* next = nullptr;
+        ListNode* next = NULL;
         
         for (int i = 0; i < k; i++) 
         {
