@@ -16,7 +16,6 @@ public:
         if (!head || k == 1) return head;
 
         ListNode* temp = head;
-        int count = 0;
 
         // Step 1: Count k nodes
         for (int i = 0; i < k; i++) 
