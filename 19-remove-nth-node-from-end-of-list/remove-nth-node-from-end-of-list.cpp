@@ -31,6 +31,5 @@ public:
 
         slow->next = slow->next->next;
         return head;
-
     }
 };
