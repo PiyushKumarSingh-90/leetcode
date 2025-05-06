@@ -35,9 +35,10 @@ public:
                 // Move prev forward if no duplicate
                 prev = prev->next;
             }
+
             head = head->next; // Move head forward
         }
 
-        return dummy->next; // Return the updated list
+        return dummy->next; 
     }
 };
