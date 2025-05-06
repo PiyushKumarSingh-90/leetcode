@@ -12,14 +12,16 @@ class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) 
     {
-        if (!head) return nullptr; // Handle empty list
+        if (!head) return nullptr; 
 
-        ListNode* dummy = new ListNode(0); // Dummy node before head
+        ListNode* dummy = new ListNode(0); 
         dummy->next = head;
-        ListNode* prev = dummy; // Tracks the last unique node
+        ListNode* prev = dummy; 
 
-        while (head) {
-            if (head->next && head->val == head->next->val) {
+        while (head) 
+        {
+            if (head->next && head->val == head->next->val) 
+            {
                 // Move to the last duplicate
                 while (head->next && head->val == head->next->val) {
                     head = head->next;
