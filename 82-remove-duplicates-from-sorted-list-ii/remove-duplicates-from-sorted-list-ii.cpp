@@ -23,7 +23,8 @@ public:
             if (head->next && head->val == head->next->val) 
             {
                 // Move to the last duplicate
-                while (head->next && head->val == head->next->val) {
+                while (head->next && head->val == head->next->val) 
+                {
                     head = head->next;
                 }
                 // Remove all duplicates
