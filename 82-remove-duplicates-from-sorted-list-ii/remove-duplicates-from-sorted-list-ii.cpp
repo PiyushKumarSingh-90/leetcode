@@ -29,7 +29,9 @@ public:
                 }
                 // Remove all duplicates
                 prev->next = head->next;
-            } else {
+            } 
+            else 
+            {
                 // Move prev forward if no duplicate
                 prev = prev->next;
             }
