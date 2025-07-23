@@ -16,8 +16,7 @@ public:
                 nums[i] = nums[j]; 
                 New = nums[j]; 
             }
-        }
-        
+        }        
         return i + 1;
     }
 };
