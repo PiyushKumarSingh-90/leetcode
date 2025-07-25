@@ -2,7 +2,7 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) 
     {
-        int majority = nums[0];
+        int majority ;
         int count = 0;
 
         for(int i = 0; i < nums.size(); i++)  // Standard loop with index
