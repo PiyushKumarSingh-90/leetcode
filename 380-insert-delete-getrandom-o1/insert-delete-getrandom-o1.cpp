@@ -15,7 +15,8 @@ public:
     bool insert(int val) 
     {
         // Check if val already exists
-        for (int v : values) {
+        for (int v : values) 
+        {
             if (v == val) return false;
         }
         values.push_back(val);  // Add to vector
@@ -38,6 +39,7 @@ public:
     int getRandom() 
     {
         // Randomly pick an index from the vector and return the value at that index
+        
         int randomIndex = rand() % values.size();  // Generate a random index
         return values[randomIndex];  // Return the element at that random index
     }
