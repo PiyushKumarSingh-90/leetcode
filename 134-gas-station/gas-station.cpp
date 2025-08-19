@@ -7,6 +7,7 @@ public:
         for(int i = 0 ; i < n ; i++)
         {
             int diff = gas[i]-cost[i];
+            
             totaldiff += diff;
             fule += diff;
 
