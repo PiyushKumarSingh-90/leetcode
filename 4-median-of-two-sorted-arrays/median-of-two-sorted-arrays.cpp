@@ -5,12 +5,10 @@ public:
     {
         vector<int> arr3;
         double median;
-
-        int n1=nums1.size(), n2=nums2.size();
-
+        
         int i=0,j=0;
         
-        while(i<n1 && j<n2)
+        while(i<nums1.size() && j<nums2.size())
         {
             if(nums1[i]<nums2[j])
             {
@@ -22,18 +20,18 @@ public:
             }
         }
 
-        while(i < n1)
+        while(i < nums1.size())
         {
-            if(i< n1)
+            if(i< nums1.size())
             {
                 arr3.push_back(nums1[i]);
                 i++;
             }
         }
 
-        while(j < n2)
+        while(j < nums2.size())
         {
-            if(j< n2)
+            if(j< nums2.size())
             {
                 arr3.push_back(nums2[j]);
                 j++;
