@@ -8,7 +8,8 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
     ListNode* deleteDuplicates(ListNode* head) 
     {
