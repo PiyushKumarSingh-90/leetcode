@@ -9,7 +9,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
 
     void swap(TreeNode* root)
@@ -32,5 +33,5 @@ public:
 
         return root;
     }
-    
+
 };
