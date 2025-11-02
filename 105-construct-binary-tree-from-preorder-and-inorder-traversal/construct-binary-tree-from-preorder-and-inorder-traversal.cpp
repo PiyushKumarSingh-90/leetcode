@@ -9,7 +9,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
 
     int preIndex = 0;
@@ -24,6 +25,7 @@ public:
         
         
         int inIndex;
+        
         for(int i=is; i<=ie; i++)
         {
             if(inorder[i] == root->val)
