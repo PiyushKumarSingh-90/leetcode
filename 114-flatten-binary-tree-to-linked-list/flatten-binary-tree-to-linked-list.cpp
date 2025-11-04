@@ -15,6 +15,7 @@ class Solution
     void preorder(TreeNode* curr)
     {
         if(!curr)   return;
+        
         if(prev)
         {
             prev->left = NULL;
