@@ -1,6 +1,7 @@
 /**
  * Definition for a binary tree node.
- * struct TreeNode {
+ * struct TreeNode 
+ {
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
@@ -9,7 +10,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- 
+
 class Solution 
 {
 public:
