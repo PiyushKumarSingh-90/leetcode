@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
 public:
 
     vector<pair<int, int>> dir{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
