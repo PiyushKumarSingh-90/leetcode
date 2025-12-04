@@ -14,7 +14,8 @@ public:
         // If number of words doesn't match pattern length, return false
         if (pattern.size() != words.size()) return false;
 
-        for (int i = 0; i < pattern.size(); i++) {
+        for (int i = 0; i < pattern.size(); i++) 
+        {
             char c = pattern[i];
             string w = words[i];
 
