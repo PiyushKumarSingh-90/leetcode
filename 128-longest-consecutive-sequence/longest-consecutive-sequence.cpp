@@ -3,6 +3,7 @@ public:
     int longestConsecutive(vector<int>& nums) 
     {
         unordered_map<int, bool> mp;
+        
         int n = nums.size();
         int ans = 0;
 
