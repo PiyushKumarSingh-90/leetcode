@@ -23,11 +23,11 @@ public:
         while(!st.empty())
         { 
             // add all the stack elements
-            result="/"+st.top()+result;
+            result="/" + st.top() + result;
             st.pop();
         }
         
-        if(result.length()==0) // if no directory or file is present
+        if(result.length() == 0) // if no directory or file is present
             result="/"; // minimum root directory must be present in result
         
         return result;
