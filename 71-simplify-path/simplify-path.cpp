@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
 public:
     string simplifyPath(string path) 
     {
@@ -12,10 +13,9 @@ public:
 
             if(token == "" || token == ".") continue;
             
-            if (token != "..") 
-                st.push(token);
-            else if (!st.empty()) 
-                st.pop();
+            if (token != "..") st.push(token);
+
+            else if (!st.empty()) st.pop();
         }
         
         string result = "";
