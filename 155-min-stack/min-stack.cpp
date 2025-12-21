@@ -1,4 +1,5 @@
-class MinStack {
+class MinStack 
+{
 public:
     stack<int>st, s2;
 
