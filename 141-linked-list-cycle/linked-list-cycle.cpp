@@ -11,23 +11,19 @@ class Solution
 public:
     bool hasCycle(ListNode *head) 
     {
-        if(head == NULL || head->next == NULL) return false;
+        if(head == NULL || head->next == NULL ) return false;
 
         ListNode *slow = head;
         ListNode *fast = head->next;
-        
-        while(slow!=fast)
+
+        while(slow != fast)
         {
-            if(fast == NULL || fast->next == NULL)
-            {
-                return false;
-            }
-            
+            if(fast == NULL || fast->next == NULL ) return false;
             slow = slow->next;
             fast = fast->next->next;
         }
 
-        return true; 
+        return true;
     }
 };
 
