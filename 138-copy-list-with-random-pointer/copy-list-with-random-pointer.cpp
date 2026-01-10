@@ -35,7 +35,7 @@ public:
             umap.insert({curr, temp});
             
             new_curr->next = temp;
-            new_curr = new_curr->next;
+            new_curr = temp;
             curr = curr->next;
         }
 
