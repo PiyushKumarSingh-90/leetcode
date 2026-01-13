@@ -20,13 +20,13 @@ public:
         // Step 1: Count k nodes
         for (int i = 0; i < k; i++) 
         {
-            if (!temp) return head; // If less than k nodes remain, return as is
+            if (!temp) return head; // If less than k nodes remain, return as it is
             temp = temp->next;
         }
 
         // Step 2: Reverse k nodes
-        ListNode* prev = NULL;
         ListNode* curr = head;
+        ListNode* prev = NULL;
         ListNode* next = NULL;
         
         for (int i = 0; i < k; i++) 
