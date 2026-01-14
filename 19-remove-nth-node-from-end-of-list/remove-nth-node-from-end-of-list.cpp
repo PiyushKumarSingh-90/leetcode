@@ -16,34 +16,37 @@ public:
         int count = 0;
         ListNode* temp = head;
 
-        // 1️⃣ Count length
-        while (temp)
+        while(temp)
         {
             count++;
             temp = temp->next;
         }
 
-        // 2️⃣ If head needs to be removed
-        if (n == count)
+        //if head need to remove
+        if(n == count)
         {
             ListNode* newHead = head->next;
             delete head;
+            
             return newHead;
         }
 
-        // 3️⃣ Reach node before the one to delete
-        int removePos = count - n;
+        int RemovePos = count - n;
+
         ListNode* curr = head;
 
-        for (int i = 1; i < removePos; i++)
+        for(int i = 1; i < RemovePos; i++)
         {
             curr = curr->next;
         }
 
-        // 4️⃣ Remove node
-        ListNode* del = curr->next;
-        curr->next = del->next;
-        delete del;
+        ListNode* DelNode = curr->next;
+
+        curr->next = DelNode->next;
+        delete DelNode;
+
+        return head;
+        
 
         return head;
     }
