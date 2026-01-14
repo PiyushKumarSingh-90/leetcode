@@ -46,9 +46,6 @@ public:
         delete DelNode;
 
         return head;
-        
-
-        return head;
     }
 };
 
@@ -58,7 +55,7 @@ public:
 
         // while(n--)
         // {
-        //     fast =fast->next;
+        //     fast = fast->next;
         // }
 
         // if(fast == NULL) return slow->next;
