@@ -17,6 +17,7 @@ public:
 
         ListNode* dummy = new ListNode(0); 
         dummy->next = head;
+
         ListNode* prev = dummy; 
 
         while (head) 
@@ -31,6 +32,7 @@ public:
                 // Remove all duplicates
                 prev->next = head->next;
             } 
+            
             else 
             {
                 // Move prev forward if no duplicate
