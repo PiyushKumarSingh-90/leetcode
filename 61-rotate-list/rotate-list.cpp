@@ -36,7 +36,7 @@ public:
 
         loop = n - loop;
 
-        if( n == 1 || loop == n) return head;
+        if(loop == n) return head;
 
         int j = 0;
 
@@ -47,14 +47,13 @@ public:
         while(temp != NULL)
         {
             j++;
-
+            
             if(j == loop)
             {
                 firstAddress = temp->next;
                 temp->next = NULL;
                 break;
             }
-            
             temp = temp->next;
         }
 
