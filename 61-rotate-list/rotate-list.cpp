@@ -36,24 +36,25 @@ public:
 
         loop = n - loop;
 
-        if(loop == n) return head;
+        if( n == 1 || loop == n) return head;
 
         int j = 0;
 
         ListNode* temp = head;
-
+        
         ListNode* firstAddress = head;
 
         while(temp != NULL)
         {
             j++;
-            
+
             if(j == loop)
             {
                 firstAddress = temp->next;
                 temp->next = NULL;
                 break;
             }
+            
             temp = temp->next;
         }
 
