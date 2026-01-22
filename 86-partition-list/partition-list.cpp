@@ -37,8 +37,8 @@ public:
         }
 
 
-        after->next = nullptr;
-        before->next = afterHead->next;
+        after->next = nullptr; // Mark end of after list
+        before->next = afterHead->next; // Connect before list to after list
 
         return beforeHead->next;
 
