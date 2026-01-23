@@ -20,7 +20,8 @@ public:
         }
     };
 
-    unordered_map<int,node*>mp;
+    unordered_map < int , node* > mp;
+
     int capacity;
    
 //two dummy nodes to keep track starting and ending point of list  
