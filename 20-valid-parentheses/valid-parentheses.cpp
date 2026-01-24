@@ -17,10 +17,11 @@ public:
                 (st.top() == '[' && c == ']') || 
                 (st.top() == '{' && c == '}') 
             )
-
             {
                 st.pop();
             }
+
+
             else
             {
                 st.push(c);
