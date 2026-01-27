@@ -1,7 +1,7 @@
 class MinStack 
 {
 public:
-    stack<int>st, s2;
+    stack<int> st, s2;
 
     MinStack() 
     {
