@@ -5,23 +5,50 @@ public:
     {
         stack<int> st;
 
-        for (auto x : tokens)
+        for(auto x : tokens)
         {
-            if (x == "+" || x == "-" || x == "*" || x == "/")
+            if(x == "+" || x == "-" || x == "*" || x == "/")
             {
-                int op1 = st.top(); st.pop();  // right operand
-                int op2 = st.top(); st.pop();  // left operand
+                int op1 = st.top(); st.pop();
+                int op2 = st.top(); st.pop();
 
-                if (x == "+") st.push(op2 + op1);
+                if(x == "+") st.push(op1 + op2);
                 else if (x == "-") st.push(op2 - op1);
                 else if (x == "*") st.push(op2 * op1);
                 else if (x == "/") st.push(op2 / op1);
             }
+
             else
             {
                 st.push(stoi(x));
             }
         }
+
         return st.top();
     }
 };
+
+
+
+// stack<int> st;
+
+//         for (auto x : tokens)
+//         {
+//             if (x == "+" || x == "-" || x == "*" || x == "/")
+//             {
+//                 int op1 = st.top(); st.pop();  // right operand
+//                 int op2 = st.top(); st.pop();  // left operand
+
+//                 if (x == "+") st.push(op2 + op1);
+//                 else if (x == "-") st.push(op2 - op1);
+//                 else if (x == "*") st.push(op2 * op1);
+//                 else if (x == "/") st.push(op2 / op1);
+//             }
+
+//             else
+//             {
+//                 st.push(stoi(x));
+//             }
+//         }
+        
+//         return st.top();
