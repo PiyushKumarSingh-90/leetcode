@@ -3,28 +3,55 @@ class Solution
 public:
     vector<int> twoSum(vector<int>& numbers, int target) 
     {
-        int left = 0, right = numbers.size() - 1;
+        int left = 0 , right = numbers.size() -1;
 
-        while (left < right) 
+        while(left < right)
         {
             int sum = numbers[left] + numbers[right];
 
-            if (sum == target) 
+            if(sum == target)
             {
-                return {left + 1, right + 1}; // 1-indexed result
+                return {left + 1 ,right + 1};
             }
 
-            if (sum < target) 
+            else if(sum < target)
             {
-                left++;
-            } 
-            else 
+                left++; 
+            }
+            
+            else
             {
                 right--;
             }
         }
 
-        return {}; // This line is never reached as exactly one solution exists.
+        return {};
     }
-    
 };
+
+
+//  int left = 0, right = numbers.size() - 1;
+
+//         while (left < right) 
+//         {
+//             int sum = numbers[left] + numbers[right];
+
+//             if (sum == target) 
+//             {
+//                 return {left + 1, right + 1}; // 1-indexed result
+//             }
+
+//             if (sum < target) 
+//             {
+//                 left++;
+//             } 
+
+//             else 
+//             {
+//                 right--;
+//             }
+            
+//         }
+
+//         return {}; // This line is never reached as exactly one solution exists.
+//     }
