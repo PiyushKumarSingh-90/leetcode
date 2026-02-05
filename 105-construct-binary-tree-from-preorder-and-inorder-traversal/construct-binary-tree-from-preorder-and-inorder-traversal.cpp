@@ -14,7 +14,7 @@ class Solution
 public:
 
     
-    TreeNode* buildTreeUtil(vector<int>& preorder, vector<int>& inorder,int& preIdx, int is, int ie)
+    TreeNode* helper(vector<int>& preorder, vector<int>& inorder,int& preIdx, int is, int ie)
     {
         if(is > ie) return NULL; // is = inOrder Starting value   &   ie = inorder ending value.
         
@@ -34,8 +34,8 @@ public:
             }
         }
         
-        root->left = buildTreeUtil(preorder, inorder, preIdx, is, inIndex-1);
-        root->right = buildTreeUtil(preorder, inorder, preIdx, inIndex+1, ie);
+        root->left = helper(preorder, inorder, preIdx, is, inIndex-1);
+        root->right = helper(preorder, inorder, preIdx, inIndex+1, ie);
         
         return root;
         
@@ -45,7 +45,7 @@ public:
     {
         int preIndex = 0;
 
-        TreeNode* ans = buildTreeUtil(preorder, inorder, preIndex, 0, inorder.size()-1);
+        TreeNode* ans = helper(preorder, inorder, preIndex, 0, inorder.size()-1);
         return ans;
     }   
 };
