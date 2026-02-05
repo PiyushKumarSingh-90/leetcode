@@ -26,7 +26,7 @@ public:
         
         int inIndex;
         
-        for(int i=is; i<=ie; i++)
+        for(int i = is; i <= ie; i++)
         {
             if(inorder[i] == root->val)
             {
