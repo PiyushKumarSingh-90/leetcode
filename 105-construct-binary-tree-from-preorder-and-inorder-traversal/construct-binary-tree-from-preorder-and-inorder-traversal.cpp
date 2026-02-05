@@ -13,15 +13,14 @@ class Solution
 {
 public:
 
-    int preIndex = 0;
     
-    TreeNode* buildTreeUtil(vector<int>& preorder, vector<int>& inorder, int is, int ie)
+    TreeNode* buildTreeUtil(vector<int>& preorder, vector<int>& inorder,int& preIdx, int is, int ie)
     {
-        if(is > ie) return NULL;
+        if(is > ie) return NULL; // is = inOrder Starting value   &   ie = inorder ending value.
         
-        TreeNode* root = new TreeNode(preorder[preIndex]);
+        TreeNode* root = new TreeNode(preorder[preIdx]);
 
-        preIndex++;
+        preIdx++;
         
         
         int inIndex;
@@ -35,8 +34,8 @@ public:
             }
         }
         
-        root->left = buildTreeUtil(preorder, inorder, is, inIndex-1);
-        root->right = buildTreeUtil(preorder, inorder, inIndex+1, ie);
+        root->left = buildTreeUtil(preorder, inorder, preIdx, is, inIndex-1);
+        root->right = buildTreeUtil(preorder, inorder, preIdx, inIndex+1, ie);
         
         return root;
         
@@ -44,7 +43,9 @@ public:
 
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) 
     {
-        TreeNode* ans = buildTreeUtil(preorder, inorder, 0, inorder.size()-1);
+        int preIndex = 0;
+
+        TreeNode* ans = buildTreeUtil(preorder, inorder, preIndex, 0, inorder.size()-1);
         return ans;
     }   
 };
