@@ -9,36 +9,42 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
 
-    int postIndex;  // Track current index in postorder traversal
-    unordered_map<int, int> indexMap;  // Store inorder indices for O(1) lookups
-
-    TreeNode* buildTreeUtil(vector<int>& inorder, vector<int>& postorder, int is, int ie) 
+    TreeNode* helper(vector<int>& inorder, vector<int>& postorder , int& postIdx , int is , int ie)
     {
-        if (is > ie) return nullptr;
+        if (is > ie) return NULL; 
 
-        TreeNode* root = new TreeNode(postorder[postIndex--]);
-        int inIndex = indexMap[root->val];  // O(1) lookup
+        TreeNode* root = new TreeNode(postorder[postIdx]);
+        postIdx--;
 
-        // Build right subtree first (postorder processes right subtree before left)
-        root->right = buildTreeUtil(inorder, postorder, inIndex + 1, ie);
-        root->left = buildTreeUtil(inorder, postorder, is, inIndex - 1);
+        int inIndex;
+
+        for(int i = is ; i <= ie ; i++)
+        {
+            if(inorder[i] == root->val)
+            {
+                inIndex = i;
+                break;
+            }           
+        }
+
+        root->right = helper(inorder , postorder , postIdx , inIndex + 1 , ie );
+        root->left = helper(inorder, postorder , postIdx ,is, inIndex - 1 );
 
         return root;
     }
 
+
+
     TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) 
     {
-        
-        postIndex = postorder.size() - 1; // Start from last element of postorder
+        int postIndex = postorder.size() - 1;
 
-        for (int i = 0; i < inorder.size(); i++)
-        {
-            indexMap[inorder[i]] = i;  // Store inorder indices for quick access
-        }
+        TreeNode* ans =  helper(inorder, postorder, postIndex, 0 , inorder.size() - 1);
 
-        return buildTreeUtil(inorder, postorder, 0, inorder.size() - 1);
+        return ans;
     }
 };
