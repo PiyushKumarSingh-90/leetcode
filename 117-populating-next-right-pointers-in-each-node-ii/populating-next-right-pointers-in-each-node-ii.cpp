@@ -16,13 +16,14 @@ public:
 };
 */
 
-class Solution {
+class Solution 
+{
 public:
     Node* connect(Node* root) 
     {
         if(root == NULL) return root;
         
-        queue<Node*>q;
+        queue<Node*> q;
         q.push(root);
         
         while(!q.empty())
@@ -31,38 +32,40 @@ public:
 
             if( size == 0) return root;
             
-            while(size>0)
+            while(size > 0)
             {
                 Node* temp;
                 
-                if(size>1)
+                if(size > 1)
                 {
                     temp = q.front();
                     q.pop();
                     
                     Node* nextAdd = q.front();
-                    temp->next = nextAdd;
-                    
+                    temp->next = nextAdd;                    
                 }
+
 
                 else
                 {
                     temp = q.front();
                     q.pop();
                 }
-                
+
+
                 if(temp->left != NULL)
                 {
                    q.push(temp->left); 
                 }
                     
+
                 if(temp->right != NULL)
                 {
                     q.push(temp->right);
                 }
-                
+
                 size--;
-                
+                 
             }
         }
         
