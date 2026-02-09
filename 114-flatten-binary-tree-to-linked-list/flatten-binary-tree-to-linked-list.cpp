@@ -12,9 +12,10 @@
 class Solution 
 {
     TreeNode* prev;
+
     void preorder(TreeNode* curr)
     {
-        if(!curr)   return;
+        if(!curr) return;
         
         if(prev)
         {
@@ -24,14 +25,17 @@ class Solution
         
         TreeNode* r = curr->right;
         prev = curr;
+        
         preorder(curr->left);
         preorder(r);
     }
 
-public:
+    public:
+
     void flatten(TreeNode* root) 
     {
         prev = NULL;
         preorder(root);
     }
+
 };
