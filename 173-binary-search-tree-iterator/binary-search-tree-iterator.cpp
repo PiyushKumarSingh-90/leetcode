@@ -9,7 +9,8 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class BSTIterator {
+class BSTIterator 
+{
 public:
 
     stack<TreeNode*> st;
@@ -25,6 +26,7 @@ public:
         {
             return;
         }
+        
         st.push(root);
 
         while(root->left)
