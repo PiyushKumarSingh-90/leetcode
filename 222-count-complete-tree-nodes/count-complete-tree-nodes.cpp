@@ -16,7 +16,7 @@ public:
     int countLeftHeight(TreeNode* root)
     {
 
-        int count=0;
+        int count = 0 ;
 
         while(root)
         {
@@ -33,7 +33,7 @@ public:
     int countRightHeight(TreeNode* root)
     {
 
-        int count=0;
+        int count = 0;
 
         while(root)
         {
