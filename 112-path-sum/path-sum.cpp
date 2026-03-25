@@ -24,9 +24,9 @@ public:
         
         if(!root->left && !root->right)
         {
-            if(s==targetSum)
+            if(s == targetSum)
             {
-                b=1;
+               b = 1;
             }
         }
         
@@ -36,10 +36,11 @@ public:
 
     bool hasPathSum(TreeNode* root, int targetSum) 
     {
-        int s=0;
+        int s = 0;
 
         preorder(s,targetSum,root);
         
         return b;
+        
     }
 };
