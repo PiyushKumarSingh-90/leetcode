@@ -13,14 +13,14 @@ class Solution
 {
 public:
 
-    bool b=0;
+    bool b = 0;
     
     void preorder(int s,int targetSum,TreeNode* root)
     {
         
         if(!root)return;
         
-        s +=(root->val);
+        s += (root->val);
         
         if(!root->left && !root->right)
         {
