@@ -9,38 +9,34 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+
 class Solution 
 {
 public:
-
     bool b = false;
-    
-    void preorder(int s,int targetSum,TreeNode* root)
+
+    void preorder(int s, int targetSum, TreeNode* root)
     {
-        
-        if(!root)return;
-        
-        s += (root->val);
-        
-        if(!root->left && !root->right)
+        if (!root || b) return;   // ✅ stop if null OR already found
+
+        s += root->val;
+
+        if (!root->left && !root->right)
         {
-            if(s == targetSum)
+            if (s == targetSum)
             {
-               b = 1;
+                b = true;
+                return;          // ✅ stop further recursion
             }
         }
-        
-        preorder(s,targetSum,root->left);
-        preorder(s,targetSum,root->right);
+
+        preorder(s, targetSum, root->left);
+        preorder(s, targetSum, root->right);
     }
 
     bool hasPathSum(TreeNode* root, int targetSum) 
     {
-        int s = 0;
-
-        preorder(s,targetSum,root);
-        
+        preorder(0, targetSum, root);
         return b;
-        
     }
 };
