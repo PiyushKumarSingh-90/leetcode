@@ -33,7 +33,7 @@ class Solution
     }
 
 
-    void flatten(TreeNode* root) 
+    void flatten(TreeNode* root ) 
     {
         prev = NULL;
         preorder(root);
