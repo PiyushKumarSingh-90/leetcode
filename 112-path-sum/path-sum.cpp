@@ -13,7 +13,7 @@ class Solution
 {
 public:
 
-    bool b = 0;
+    bool b = false;
     
     void preorder(int s,int targetSum,TreeNode* root)
     {
