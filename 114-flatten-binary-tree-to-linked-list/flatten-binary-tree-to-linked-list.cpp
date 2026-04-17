@@ -11,6 +11,7 @@
  */
 class Solution 
 {
+    public:
     TreeNode* prev;
 
     void preorder(TreeNode* curr)
