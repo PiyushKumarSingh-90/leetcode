@@ -12,6 +12,7 @@
 class Solution 
 {
     public:
+
     TreeNode* prev;
 
     void preorder(TreeNode* curr)
@@ -30,8 +31,6 @@ class Solution
         preorder(curr->left);
         preorder(r);
     }
-
-    public:
 
     void flatten(TreeNode* root) 
     {
