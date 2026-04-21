@@ -9,6 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
+ 
 class Solution 
 {
 public:
@@ -19,23 +20,20 @@ public:
     {
         if(root == NULL) return 0;
         
-        int l = solve(root->left);
-        int r = solve(root->right);
+        int left = solve(root->left);
+        int right = solve(root->right);
         
-        int neeche_hi_milgaya_answer = l + r + root->val; //(1)
+        int path_through_root = left + right + root->val; //(1)
         
-        int koi_ek_acha = max(l, r) + root->val; //(2)
+        int one_side_path = max(left, right) + root->val; //(2)
         
-        int only_root_acha = root->val; //(3)
+        int only_root = root->val; //(3)
         
-        maxSum = max({maxSum, neeche_hi_milgaya_answer, koi_ek_acha, only_root_acha});
+        maxSum = max({maxSum, path_through_root, one_side_path, only_root});
             
-     
-        //most important part
-        return max(koi_ek_acha, only_root_acha);   
-        
+        // most important part
+        return max(one_side_path, only_root);   
     }
-
 
     int maxPathSum(TreeNode* root) 
     {
