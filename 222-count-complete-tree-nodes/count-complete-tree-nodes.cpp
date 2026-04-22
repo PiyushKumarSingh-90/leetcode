@@ -59,7 +59,7 @@ public:
         //this means we got a perfect tree hence it will have 2^h -1 nodes.
         if(lh == rh) return pow(2, lh) - 1;
 
-        // 1 added for the parent one node while left and right parts are needed to calculate the valuesfor the heights.
+        // 1 added for the parent node while left and right parts are needed to calculate the values for the heights.
         
         return 1 + countNodes(root->left) + countNodes(root->right);
 
