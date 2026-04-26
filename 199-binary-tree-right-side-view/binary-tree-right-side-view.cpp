@@ -28,7 +28,6 @@ public:
 
     vector<int> rightSideView(TreeNode* root) 
     {
-        if(!root) return {};
         
         vector<int> result;
         
