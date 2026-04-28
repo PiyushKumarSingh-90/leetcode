@@ -9,22 +9,25 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution 
+{
 public:
     vector<double> averageOfLevels(TreeNode* root) 
     {
-        vector<double>avg;
-        queue<TreeNode*>q;
+        vector<double> avg;
+
+        queue<TreeNode*> q;
 
         q.push(root);
 
         while(!q.empty())
         {
             int n = q.size();
+
             double sum = 0;
             double count = n;
 
-            for(int i=0 ; i < n ; i++)
+            for(int i = 0 ; i < n ; i++)
             {
                TreeNode* temp = q.front();
 
@@ -42,9 +45,11 @@ public:
 
                 sum += temp->val;
             }
+
             avg.push_back(sum/count);
             
         }
+
         return avg;
     }
 };
