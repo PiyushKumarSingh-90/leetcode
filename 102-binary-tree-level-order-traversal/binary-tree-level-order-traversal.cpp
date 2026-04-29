@@ -16,14 +16,15 @@ class Solution
 public:
     vector<vector<int>> levelOrder(TreeNode* root) 
     {
-        queue<TreeNode*>q;
-        q.push(root);
+        queue<TreeNode*> q;
         vector<vector<int>>ans;
 
         if(!root)
         {
             return ans;
         }
+
+        q.push(root);
 
         while(!q.empty())
         {
@@ -49,7 +50,7 @@ public:
                     q.push(data->right);   
                 }
             }
-            
+
             ans.push_back(level);
         }
         return ans;
