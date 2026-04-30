@@ -30,9 +30,9 @@ public:
         {
             int n = q.size();
 
-            vector<int>level;
+            vector<int> level;
 
-            for(int i=0 ; i < n ;i++)
+            for(int i = 0 ; i < n ;i++)
             {
                 TreeNode* data = q.front();
 
