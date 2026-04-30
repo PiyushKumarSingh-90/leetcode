@@ -23,7 +23,7 @@ public:
 
         if(root == NULL) return ans;
         
-        while(1)
+        while(!q.empty())
         {
             int size = q.size();
 
