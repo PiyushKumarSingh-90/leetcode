@@ -2,7 +2,7 @@
  * Definition for a binary tree node.
  * struct TreeNode 
  {
- *     int val;
+ *     int val;d
  *     TreeNode *left;
  *     TreeNode *right;
  *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
@@ -17,27 +17,23 @@ public:
 
     void inorder(TreeNode*root,int &k,int &ans)
     {
-        if(root==NULL)
-        {
-            return;
-        }
+        if(root == NULL) return;
 
         inorder(root->left,k,ans);
 
         k--;
 
-        if(k==0)
-        {
-            ans=root->val;
-        }
+        if(k == 0) ans = root->val;
         
         inorder(root->right,k,ans);
     }
 
     int kthSmallest(TreeNode* root, int k) 
     {
-        int ans=0;
-        inorder(root,k,ans);
+        int ans = 0;
+
+        inorder(root, k, ans);
+        
         return ans;
     }
 };
