@@ -8,12 +8,11 @@ public:
     {
         if( i < 0 || i >= grid.size() ||
             j < 0 || j >= grid[0].size() || 
-
             grid[i][j] != '1' )
 
         return;
         
-        grid[i][j] = '$';
+        grid[i][j] = '$'; // We replace '1' with '$', This means: already visited
         
         for(pair<int, int> &p : dir) 
         {
