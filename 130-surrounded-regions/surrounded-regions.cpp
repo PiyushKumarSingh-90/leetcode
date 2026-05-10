@@ -7,9 +7,9 @@ public:
         int n = board.size();
         int m = board[0].size();
         
-        for(int i=0; i<n; i++)
+        for(int i = 0; i < n; i++)
         {
-            for(int j=0; j<m; j++)
+            for(int j = 0; j < m ; j++)
             {
                 if(board[i][j] == 'B')
                 {
@@ -25,9 +25,11 @@ public:
         }
     }
     
+
+
     bool isValid(int i , int j, int n, int m, vector<vector<char>>& board)
     {
-        if(i>=0 && i<n && j>=0 && j<m && board[i][j] == 'O')
+        if(i >= 0 && i < n && j >= 0 && j < m && board[i][j] == 'O')
         {
             return true;
         }
@@ -35,6 +37,8 @@ public:
         return false;
     }
     
+
+
     void dfs(vector<vector<char>>& board, int i , int j, int n, int m)
     {
         board[i][j] = 'B';
@@ -61,49 +65,57 @@ public:
         
     }
 
+
+
     void solve(vector<vector<char>>& board) 
     {
         
         int n = board.size();
         int m = board[0].size();
         
-        for(int i=0; i<n; i++)
+        for(int i = 0; i < n; i++)
         {
             
             // left -> top bottom
-            int j =0;
+            int j = 0;
 
             if(board[i][j] == 'O')
             {                
                 dfs(board, i, j, n, m);
             }
             
-            j = m-1;
-            // right -> top bootm 
+
+            // right -> top bootom 
+            j = m - 1;
+
             if(board[i][j] == 'O')
             {
                 dfs(board, i, j, n, m);
             }
+
         }
         
-        for(int j=0; j<m; j++)
+        for(int j = 0; j < m; j++)
         {
             
             // top -> left right
-            int i =0;
+            int i = 0;
 
             if(board[i][j] == 'O')
             {
                 dfs(board, i, j, n, m);
             }
             
-            i = n-1;
+
 
             // bottom -> left right
+            i = n-1;
+
             if(board[i][j] == 'O')
             {
                 dfs(board, i, j, n, m);
             }
+
         }
         
         convert(board);
