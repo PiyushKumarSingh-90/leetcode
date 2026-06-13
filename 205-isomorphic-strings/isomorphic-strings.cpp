@@ -10,7 +10,7 @@ public:
         {
             char c = s[i];
 
-            if (!seen[c]) 
+            if (seen[c] == 0) 
             {
                 for (char s: seen) 
                 {
