@@ -12,9 +12,9 @@ public:
 
             if (seen[c] == 0) 
             {
-                for (char s: seen) 
+                for (char x: seen) 
                 {
-                    if (s == t[i]) return false;
+                    if (x == t[i]) return false;
                 }
                 
                 seen[c] = t[i];
