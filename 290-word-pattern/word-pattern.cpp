@@ -4,11 +4,13 @@ public:
     {
         unordered_map<char, string> mapP; // Pattern character → word
         unordered_map<string, char> mapS; // Word → pattern character
+
         vector<string> words;
         string word;
 
         // Split 's' into words
         stringstream ss(s);
+        
         while (ss >> word) words.push_back(word);
 
         // If number of words doesn't match pattern length, return false
