@@ -11,14 +11,16 @@ class NestedIterator:
         for item in nestedList:
 
             if item.isInteger():
-                self.arr.append(item)
+                self.arr.append(item.getInteger())
 
             else:
                 self.flatten(item.getList())
 
     def next(self) -> int:
         value = self.arr[self.index]
+
         self.index += 1
+
         return value
 
     def hasNext(self) -> bool:
