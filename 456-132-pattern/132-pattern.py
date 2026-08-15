@@ -5,12 +5,13 @@ class Solution:
 
         for num in reversed(nums):
 
+            # num = possible "1"
             if num < second:
                 return True
 
+            # num = possible "3"
             while stack and stack[-1] < num:
-                second = stack[-1]
-                stack.pop()
+                second = stack.pop()
 
             stack.append(num)
 
