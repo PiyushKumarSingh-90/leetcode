@@ -3,7 +3,6 @@ class Solution:
         s = s.replace("-", "").upper()
 
         first = len(s) % k
-
         ans = []
 
         if first > 0:
