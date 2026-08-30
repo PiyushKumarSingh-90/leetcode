@@ -4,18 +4,19 @@ class Solution:
 
         ans = []
 
-        def backtrack(index, path, total):
+        def backtrack(start, path, total):
+
             if total == target:
                 ans.append(path[:])
                 return
 
-            for i in range(index, len(candidates)):
+            for i in range(start, len(candidates)):
 
-                if i > index and candidates[i] == candidates[i - 1]:
+                if i > start and candidates[i] == candidates[i - 1]:
                     continue
 
                 if total + candidates[i] > target:
-                    continue
+                    break
 
                 path.append(candidates[i])
 
