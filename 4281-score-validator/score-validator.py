@@ -8,7 +8,7 @@ class Solution:
             if counter == 10:
                 break
 
-            if event.isdigit():
+            if event in ["0", "1", "2", "3", "4", "6"]:
                 score += int(event)
 
             elif event == "W":
