@@ -4,13 +4,10 @@ class Solution:
         ans = 0
 
         for a, b in dominoes:
-
-            if a > b:
-                key = (a, b)
-            else:
-                key = (b, a)
+            key = (min(a, b), max(a, b))
 
             ans += freq.get(key, 0)
+
             freq[key] = freq.get(key, 0) + 1
 
         return ans
