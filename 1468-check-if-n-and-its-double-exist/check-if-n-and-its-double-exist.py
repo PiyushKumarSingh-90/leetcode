@@ -1,9 +1,15 @@
 class Solution:
     def checkIfExist(self, arr):
-        for i in range(len(arr)):
-            for j in range(len(arr)):
+        seen = set()
 
-                if i != j and arr[i] == 2 * arr[j]:
-                    return True
+        for num in arr:
+
+            if 2 * num in seen:
+                return True
+
+            if num % 2 == 0 and num / 2 in seen:
+                return True
+
+            seen.add(num)
 
         return False
